@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+</head>
+<body>
+
+<script>
+    // Declare variables for marks using let and const
+    const totalSubjects = 5; // Total number of subjects
+    let Physics = 85;
+    let Maths = 90;
+    let Chemistry = 78;
+    let Biology = 88;
+    let Crimnology = 92;
+
+    // Calculate total marks and percentage
+    const totalMarks = 500; // Assuming each subject is out of 100 marks
+    let obtainedMarks = Physics + Maths + Chemistry + Biology + Crimnology;
+
+    // Calculate percentage
+    let percentage = (obtainedMarks / totalMarks) * 100;
+
+    // Determine grade based on percentage
+    let grade;
+    if (percentage >= 90) {
+        grade = "A+";
+    } else if (percentage >= 80) {
+        grade = "A";
+    } else if (percentage >= 70) {
+        grade = "B+";
+    } else if (percentage >= 60) {
+        grade = "B";
+    } else if (percentage >= 50) {
+        grade = "C";
+    } else {
+        grade = "F";
+    }
+
+    // Output the result using template literals
+    document.write(`
+        <h2>Mark Sheet</h2>
+        <p>PHYSICS: ${Physics} marks</p>
+        <p>MATHS : ${ Maths } marks</p>
+        <p>CHEMISTRY: ${Chemistry} marks</p>
+        <p>BIOLOGY: ${Biology} marks</p>
+        <p>CRIMNOLOGY: ${Crimnology } marks</p>
+        <p><strong>Total Marks: ${obtainedMarks} / ${totalMarks}</strong></p>
+        <p><strong>Percentage: ${percentage}%</strong></p>
+        <p><strong>Grade: ${grade}</strong></p>
+    `);
+</script>
+
+</body>
+</html>
